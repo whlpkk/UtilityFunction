@@ -1,0 +1,78 @@
+//
+//  RootViewController.m
+//  iOS-Categories (https://github.com/shaojiankui/iOS-Categories)
+//
+//  Created by Jakey on 14/12/15.
+//  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
+//
+
+#import "RootViewController.h"
+#import "TappedLabelViewController.h"
+@interface RootViewController ()
+
+@end
+
+@implementation RootViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+    self.title = @"UtilityFunction";
+    _items = @{
+        @"ThirdLibrary": @[@"Reachability_判断网络状态"
+        ],
+        @"Foundation": @[@"TappedLabel_带事件的label",
+                         @"BTLabel_label垂直方向布局",
+                         @"OBShapeedButton_非矩形button",
+                         @"SelectTableView_弹出选择框"
+
+        ]
+    };
+    [self.tableView reloadData];
+}
+
+#pragma mark - Table view data source
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [[_items allKeys] count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [_items allKeys][section];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [[_items objectForKey:[_items allKeys][section]] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+
+    // Configure the cell...
+    cell.textLabel.text =  [_items objectForKey:[_items allKeys][indexPath.section]][indexPath.row];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    return cell;
+}
+
+#pragma mark - Table view delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *fullName =  [_items objectForKey:[_items allKeys][indexPath.section]][indexPath.row];
+    NSString *name = [[fullName componentsSeparatedByString:@"_"] firstObject];
+    NSString *className = [name stringByAppendingString:@"ViewController"];
+    Class class = NSClassFromString(className);
+
+    TappedLabelViewController *controller = [[TappedLabelViewController alloc] init];
+
+//    UIViewController *controller = [[class alloc]init];
+//
+    controller.title = name;
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+@end

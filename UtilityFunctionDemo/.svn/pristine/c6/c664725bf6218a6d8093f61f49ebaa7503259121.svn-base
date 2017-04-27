@@ -1,0 +1,41 @@
+//
+//  StyledPageViewController.m
+//  s
+//
+//  Created by wendy on 15/6/25.
+//  Copyright (c) 2015年 cooperlink. All rights reserved.
+//
+
+#import "StyledPageViewController.h"
+#import "AppDelegate.h"
+
+@interface StyledPageViewController ()
+
+@end
+
+@implementation StyledPageViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [ApplicationDelegate showDescription:@"StyledPageControl是UIPageControl的扩展，可提供更多的定制功能，可更改颜色、间隙宽度、样式和直径。" OnView:self.view];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+   #pragma mark - Navigation
+
+   // In a storyboard-based application, you will often want to do a little preparation before navigation
+   - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+   }
+ */
+
+@end

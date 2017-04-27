@@ -1,0 +1,34 @@
+//
+//  UIView+Extend.m
+//  xiwu
+//
+//  Created by yzk on 14-7-24.
+//  Copyright (c) 2014年 cooperLink. All rights reserved.
+//
+
+#import "UIView+Extend.h"
+
+@implementation UIView (Extend)
+
+- (UIView *)addLineWithFrame:(CGRect)frame
+                   lineColor:(UIColor *)lineColor
+{
+    UIView *view = [[UIView alloc] initWithFrame:frame];
+    view.backgroundColor = lineColor;
+    [self addSubview:view];
+    return view;
+}
+
+- (UIImageView *)addLineWithFrame:(CGRect)frame
+                       imageNamed:(NSString *)imageName
+{
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:frame];
+    imageView.image = [UIImage imageNamed:imageName];
+    [self addSubview:imageView];
+    return imageView;
+}
+
+
+
+@end
+

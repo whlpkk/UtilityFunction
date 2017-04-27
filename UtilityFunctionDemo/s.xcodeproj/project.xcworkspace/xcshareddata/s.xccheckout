@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CB048E3F-3FFF-4928-B226-78A717623B20</string>
+	<key>IDESourceControlProjectName</key>
+	<string>s</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>c147cf38-0d51-11e4-8f26-514a245af2e5++938</key>
+		<string>svn://hanter.yao@192.168.0.40/Dev_mgr/04-RD/03-UtilityFunction/UtilityFunctionDemo</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>s.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>c147cf38-0d51-11e4-8f26-514a245af2e5++938</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>c147cf38-0d51-11e4-8f26-514a245af2e5++938</key>
+		<string>svn://hanter.yao@192.168.0.40/Dev_mgr</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://hanter.yao@192.168.0.40/Dev_mgr/04-RD/03-UtilityFunction/UtilityFunctionDemo/s.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>c147cf38-0d51-11e4-8f26-514a245af2e5++938</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>c147cf38-0d51-11e4-8f26-514a245af2e5++938</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UtilityFunctionDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
