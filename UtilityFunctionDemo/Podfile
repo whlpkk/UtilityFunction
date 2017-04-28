@@ -1,0 +1,17 @@
+
+platform :ios, '8.0'
+target 's' do
+
+pod 'AFNetworking'
+pod 'IQKeyboardManager'
+pod 'CocoaLumberjack'
+pod 'MBProgressHUD'
+pod 'MJRefresh'
+pod 'NJKWebViewProgress'
+pod 'Reachability'
+pod 'SDWebImage'
+pod 'StyledPageControl'
+pod 'CHTCollectionViewWaterfallLayout'
+
+end
+

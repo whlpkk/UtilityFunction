@@ -49,8 +49,6 @@
                            @"MD5"],
         @"f_AlertManager": @[@"YZKAlertManager"],
         @"g_DeviceManager": @[@"YZKDeviceManager"],
-        @"h_GDMap": @[@"GDLocation_高德地图定位",
-                      @"GDAnnotation_高德地图大头针标注"]
     };
     [self.tableView reloadData];
 

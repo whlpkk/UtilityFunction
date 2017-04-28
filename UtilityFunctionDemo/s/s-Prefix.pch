@@ -18,5 +18,4 @@
     #import "FrameConfig.h"
     #import "AppDelegate.h"
 
-    #import <MAMapKit/MAMapKit.h>
 #endif
