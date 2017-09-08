@@ -111,22 +111,12 @@
 {
     float imageWidth = self.size.width;
     float imageHeight = self.size.height;
-    float width = targetWidth;
-    float height = self.size.height / (self.size.width / width);
-
-    float widthScale = imageWidth / width;
-    float heightScale = imageHeight / height;
-
+    float targetHeight = imageHeight / (imageWidth / targetWidth);
+    
     // 创建一个bitmap的context
     // 并把它设置成为当前正在使用的context
-    UIGraphicsBeginImageContext(CGSizeMake(width, height));
-
-    if (widthScale > heightScale) {
-        [self drawInRect:CGRectMake(0, 0, imageWidth / heightScale, height)];
-    } else {
-        [self drawInRect:CGRectMake(0, 0, width, imageHeight / widthScale)];
-    }
-
+    UIGraphicsBeginImageContext(CGSizeMake(targetWidth, targetHeight));
+    [self drawInRect:CGRectMake(0, 0, targetWidth, targetHeight)];
     // 从当前context中创建一个改变大小后的图片
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     // 使当前的context出堆栈
